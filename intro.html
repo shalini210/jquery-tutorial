@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery/jquery-3.7.1.js"></script>
+    <script>
+        function fun1()
+        {
+            var a = parseInt($("#txt1").val());
+            var b = parseInt($("#txt2").val())
+            $("#result").html(a+b)         
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="txt1">
+    <input type="text" id="txt2">
+    <input type="button" value="click here" onclick="fun1()"/>
+    <p id="result"></p>
+    
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="./jquery/jquery-ui.min.css">
+    <script src="./jquery/jquery-ui.min.js"></script>
+    <style>
+        .animate1
+        {
+            animation: demo 2s infinite;
+          width: 200px;
+        }
+        @keyframes demo {
+            /* from{width:20px;} */
+            to{width:200px;}
+        }
+        .box
+        {
+            background-color: rebeccapurple;
+            height:20px;
+            width:20px;
+        }
+    </style>
+    <script>
+        function animateElement(x)
+        {
+            $(x).addClass("animate1");
+        }
+        function stopAnimation(x)
+        {
+            let  w = $(x).width()
+           $(x).width(w)
+            $(x).removeClass("animate1")
+        }
+        function demo()
+        {
+            console.log("indemo")
+            $("#img1").css('transform', 'skewX(20deg)');
+            
+        }
+    </script>
+</head>
+<body>
+
+    <img src="images/boy5.png" id="img1" onmouseover="demo()" alt=""/>
+    <div class="box" onmouseover="animateElement(this)"
+    onmouseout="stopAnimation(this)"></div>
+</body>
+</html>

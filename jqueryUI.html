@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./jquery/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="./jquery/jquery-ui.min.css">
+    <script src="./jquery/jquery-ui.min.js"></script>
+    <style>
+        #box
+        {
+            height:100px;
+            width:100px;
+            background-color: yellowgreen;
+        }
+    </style>
+    <script>
+        $(document).ready(function()
+        {
+            $("#btnhide").click(()=>
+            {
+                $("#box").slideUp()
+                // $("#box").fadeOut()
+                // $("#box").fadeTo(2000,0.5)
+                // $("#box").hide()
+            })
+            $("#btnshow").click(()=>
+            {
+                $("#box").slideDown()
+                // $("#box").fadeIn(2000)
+                // $("#box").show()
+            })
+            $("#btntoggle").click(()=>
+            {
+                $("#box").slideToggle()
+                // $("#box").fadeOut()
+                // $("#box").fadeToggle()
+                // $("#box").toggle()
+            })
+        })
+    </script>
+</head>
+<body>
+    <input type="button" value="Hide" id="btnhide">
+    <input type="button" value="Show" id="btnshow">
+    <input type="button" value="Toggle" id="btntoggle">
+    <div id="box"></div>
+ 
+</body>
+</html>
